@@ -1,46 +1,48 @@
-#== 960 StaticMatic Generator
+== 960 StaticMatic Generator
 
-# Want to quickly develop and maintain a static web site? This generator gets everything you need.
-# It uses StaticMatic and the 960 Grid System.
+Want to quickly develop and maintain a static web site? This generator gets everything you need.  It uses StaticMatic and the 960 Grid System.
 
-#=== Getting Started
-# Create a new project
+=== Getting Started
+Create a new project
 
-#  git clone git://github.com/napcs/960static.git my_new_site
-#  cd my_new_site
-# If you already have StaticMatic and HAML installed, just do this:
-#
-#  rake setup
-#
-# Otherwise, you can use this command:
-#
-#  rake install
-#
-# which will set up the prerequisites and then create the project folder
+  git clone git://github.com/napcs/960static.git my_new_site
+  cd my_new_site
 
-#==Creating pages
-# You do all of your work under the src/ folder. Read more on working with StaticMatic at
-# http://staticmatic.rubyforge.com/
+If you already have StaticMatic and HAML installed, just do this:
 
-#==Previewing your work
-# As you build your site, you'll want to see how it looks.
-# 
-#  rake preview
+  rake setup
 
-#==Building HTML
-#
-#  rake build
+Otherwise, you can use this command:
 
-#==Deploying
-#
-#  Fill in the details for your SSH server at the top of the Rakefile and then do
-#
-#  rake deploy
-#
-# This will minify your CSS and Javascript files, and copy the files to your server via rsync.
+  rake install
 
-#==License
-#===Rake task:
+which will set up the prerequisites and then create the project folder
+
+==Creating pages
+
+You do all of your work under the src/ folder. Read more on working with StaticMatic at
+http://staticmatic.rubyforge.com/
+
+==Previewing your work
+
+As you build your site, you'll want to see how it looks.
+ 
+  rake preview
+
+==Building HTML
+
+  rake build
+
+==Deploying
+
+Fill in the details for your SSH server at the top of the Rakefile and then do
+
+  rake deploy
+
+This will minify your CSS and Javascript files, and copy the files to your server via rsync.
+
+==License
+===Rake task:
 
 Copyright (c) 2010 Brian P. Hogan
 
