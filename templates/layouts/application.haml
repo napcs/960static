@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}/
+    %title= "#{@title} | Your Site"
+    %link{:href => "/stylesheets/style.css", :rel => "stylesheet", :media => "screen", :type => "text/css"}
+    %link{:href => "/stylesheets/print.css", :rel => "stylesheet", :media => "screen", :type => "text/css"}
+    %script{:type=>"text/javascript", :charset=> "utf-8", :src=>"http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"}
+    %script{:type=>"text/javascript", :src=>"/javascripts/application.js"}
+    = stylesheets
+  %body
+    #header.container_12
+      .grid_12
+        %h1 Your Site
+        
+    #main.container_12
+      = yield
+      
+    #footer.container_12
+      .grid_12
+        %h4="&copy #{Date.today.year} your site"
+      
+    
+    
