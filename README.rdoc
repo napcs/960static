@@ -12,9 +12,10 @@ If you already have StaticMatic and HAML installed, just do this:
 
   rake setup
 
-Otherwise, you can use this command:
+Otherwise, you can use these commands:
 
   rake install
+  rake setup
 
 which will set up the prerequisites and then create the project folder
 

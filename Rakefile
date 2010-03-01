@@ -12,8 +12,15 @@ FILES = {"960" => "http://github.com/nathansmith/960-Grid-System/raw/master/code
   }
   
   
-desc "Create a new site"
+desc "Install prerequisites"
+task :install do
 
+  `gem install haml staticmatic --no-ri --no-rdoc`
+  
+end
+    
+  
+desc "Create a new site"
 task :setup  do
   puts "*** Creating site"
   `staticmatic setup .`
