@@ -6,11 +6,11 @@ WORKING_DIR = "working"
 COMPRESSOR_CMD = 'java -jar bin/yuicompressor-2.4.2.jar'
 
 
-FILES = {
-    "reset" => "http://github.com/nathansmith/960-Grid-System/raw/master/code/css/reset.css",
-    "text" => "http://github.com/nathansmith/960-Grid-System/raw/master/code/css/text.css",
-    "960" => "http://github.com/nathansmith/960-Grid-System/raw/master/code/css/960.css"
-  }
+FILES = [
+    {:name => "reset", :url => "http://github.com/nathansmith/960-Grid-System/raw/master/code/css/reset.css"},
+    {:name => "text", :url => "http://github.com/nathansmith/960-Grid-System/raw/master/code/css/text.css"},
+    {:name => "960", :url => "http://github.com/nathansmith/960-Grid-System/raw/master/code/css/960.css"}
+  ]
   
   
 desc "Install prerequisites"
@@ -78,7 +78,9 @@ namespace :ninesixty do
   
     FileUtils.rm_rf "tmp"
     FileUtils.mkdir "tmp"
-    FILES.each do |name, url|
+    FILES.each do |cssfile|
+      name = cssfile[:name]
+      url = cssfile[:url]
       outfile = "tmp/#{name}.css"
       infile = Kernel.open(url)
       File.open(outfile, "w"){|f| f << infile.readlines}
@@ -89,7 +91,9 @@ namespace :ninesixty do
   desc "Create SASS partials of 960.gs files"
   task :sassify => :fetch do
     FileUtils.mkdir_p "src/stylesheets"
-    FILES.each do |name, url|
+    FILES.each do |cssfile|
+       name = cssfile[:name]
+       url = cssfile[:url]
        puts "*** Converting #{name}.css to src/stylesheets/_#{name}.sass"
       `css2sass tmp/#{name}.css > src/stylesheets/_#{name}.sass`
     end  
@@ -144,7 +148,9 @@ end
 def compact_to_grid
   puts "*** Compacting 960.gs to a single file"
   File.open "src/stylesheets/_grid.sass", "w" do |f|
-    FILES.each do |name, url|
+    FILES.each do |cssfile|
+      name = cssfile[:name]
+      url = cssfile[:url]
       sassfile = "src/stylesheets/_#{name}.sass"
       infile = Kernel.open(sassfile)
       f << infile.readlines
