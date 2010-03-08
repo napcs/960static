@@ -6,9 +6,10 @@ WORKING_DIR = "working"
 COMPRESSOR_CMD = 'java -jar bin/yuicompressor-2.4.2.jar'
 
 
-FILES = {"960" => "http://github.com/nathansmith/960-Grid-System/raw/master/code/css/960.css",
-         "reset" => "http://github.com/nathansmith/960-Grid-System/raw/master/code/css/reset.css",
-         "text" => "http://github.com/nathansmith/960-Grid-System/raw/master/code/css/text.css"
+FILES = {
+    "reset" => "http://github.com/nathansmith/960-Grid-System/raw/master/code/css/reset.css",
+    "text" => "http://github.com/nathansmith/960-Grid-System/raw/master/code/css/text.css",
+    "960" => "http://github.com/nathansmith/960-Grid-System/raw/master/code/css/960.css"
   }
   
   
