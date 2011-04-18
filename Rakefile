@@ -7,9 +7,9 @@ COMPRESSOR_CMD = 'java -jar bin/yuicompressor-2.4.2.jar'
 
 
 FILES = [
-    {:name => "reset", :url => "http://github.com/nathansmith/960-Grid-System/raw/master/code/css/reset.css"},
-    {:name => "text", :url => "http://github.com/nathansmith/960-Grid-System/raw/master/code/css/text.css"},
-    {:name => "960", :url => "http://github.com/nathansmith/960-Grid-System/raw/master/code/css/960.css"}
+    {:name => "reset", :url => "https//github.com/nathansmith/960-Grid-System/raw/master/code/css/reset.css"},
+    {:name => "text", :url => "https://github.com/nathansmith/960-Grid-System/raw/master/code/css/text.css"},
+    {:name => "960", :url => "https://github.com/nathansmith/960-Grid-System/raw/master/code/css/960.css"}
   ]
   
   
