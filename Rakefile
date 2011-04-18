@@ -95,7 +95,7 @@ namespace :ninesixty do
        name = cssfile[:name]
        url = cssfile[:url]
        puts "*** Converting #{name}.css to src/stylesheets/_#{name}.sass"
-      `css2sass tmp/#{name}.css > src/stylesheets/_#{name}.sass`
+      `sass-cnvert tmp/#{name}.css src/stylesheets/_#{name}.sass`
     end  
     
     FileUtils.rm_rf "tmp"
